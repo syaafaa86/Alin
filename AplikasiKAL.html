@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to My Notebook &#8212; My sample book</title>
+    <title>Pagerank &#8212; My sample book</title>
   
   
   
@@ -57,12 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'AplikasiKAL';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 01 Sistem linier" href="sistemlinier.html" />
+    <link rel="prev" title="Transformasi linier" href="transformasilinier.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -143,7 +139,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -168,20 +164,20 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to My Notebook
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sistemlinier.html">Tugas 01 Sistem linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aljabarmatriks.html">Aljabar Matriks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matriksinvers.html">Matriks Invers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Determinan.html">Determinan Matriks</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="transformasilinier.html">Transformasi linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AplikasiKAL.html">Pagerank</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pagerank</a></li>
 
 
 </ul>
@@ -255,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAplikasiKAL.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +281,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/AplikasiKAL.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +291,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -356,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -367,11 +365,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to My Notebook</h1>
+    <h1>Pagerank</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pagerank</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank">Algoritma Pagerank</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#komputasi-menghitung-page-rank">komputasi menghitung page rank</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -381,12 +390,85 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-my-notebook">
-<h1>Welcome to My Notebook<a class="headerlink" href="#welcome-to-my-notebook" title="Link to this heading">#</a></h1>
-<p>(23-114) Ahmad Syauqi Fuady</p>
-<p>“Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…”
-“There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…”</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="pagerank">
+<h1>Pagerank<a class="headerlink" href="#pagerank" title="Link to this heading">#</a></h1>
+<p>##Pengertian Pagerank</p>
+<p>Pagerank adalah algoritma yang digunakan Google untuk menganalisis distribusi link dan konektivitasnya pada setiap situs web.</p>
+<p>Pagerank algorithm memberikan nilai mulai dari 0 hingga 10 untuk menunjukkan seberapa berkualitasnya website tersebut. sederhananya, pagerank merupakan sistem pemeringkatan halaman website . semakin tinggi nilainya, maka bisa dikatakan website tersebut semakin kredibel.</p>
+<p>untuk cara kerjanya yaitu  dengan menghitung banyaknya jumlah dan kualitas link ke halaman situs untuk memperkirakan seberapa pentingnya situs tersebut.
+Semakin banyak link yang mengarah ke sebuah halaman, semakin tinggi nilai PageRank-nya. Namun, bukan hanya jumlah tautan yang diperhitungkan, PageRank juga melihat kualitas tautan tersebut. Jika tautan berasal dari halaman dengan PageRank tinggi, nilai yang diberikan juga lebih tinggi. Begitu pun sebaliknya.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="algoritma-pagerank">
+<h1>Algoritma Pagerank<a class="headerlink" href="#algoritma-pagerank" title="Link to this heading">#</a></h1>
+<p>Dari pengertian diatas masih kurang bila belum ada contoh algortimanya.
+##Berikut ini contoh algoritma dari pagerank</p>
+<ul class="simple">
+<li><p>caranya yag pertama buat V0 panjang matriksnya harus sama dengan matriks yang ingin dihitung angka nya bebas dengan syarat jika dijumlah harus sama dengan 1</p></li>
+<li><p>lakukan perulangan untuk mengalikan V0 dengan matriks A dan tarh hasil matriksnya di V1</p></li>
+<li><p>lakukan hingga V saat iini dengan V selanjutnya matriksnya sama(konvegen = proses pengecekan apakah sama)(equibrium = jika hasil dari konvegen sama)</p></li>
+<li><p>jika matriks V nya tidak juga sama maka ada beberapa cara yaitu:</p></li>
+<li><p>Cara untuk menghentikan iterasi adlah dengan error toleransi atau dengan pembatasan jumlah iterasi</p></li>
+<li><p>pada error dengan cara membuatt batasan perbedaan pada contoh ini batasannya 0,01 semakin kecil maka semakin mendekati kebenaran</p></li>
+</ul>
+<p>##cara menghitung error toleransi</p>
+<ul class="simple">
+<li><p>kurangi matris selanjutanya dengan matriks saat ini simpan hasilnya</p></li>
+<li><p>kuadratkan hasilnya dan kemudian total tammbahkan semuanya</p></li>
+<li><p>akarkan total tambah tersebut dan jika hasil dari akar tersebut lebihh besar dari batasan maka lanjutkan perulangan</p></li>
+<li><p>jika pakai (sum square error) maka cukup sampai sebelum pengakaran  dan berhenti dan mengecek apakah lebih besar dari batasan atau tidak</p></li>
+<li><p>jika pakai (root square error maka lakukan sampai pengakaran)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="komputasi-menghitung-page-rank">
+<h1>komputasi menghitung page rank<a class="headerlink" href="#komputasi-menghitung-page-rank" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">V0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.25</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">],[</span><span class="mf">0.25</span><span class="p">]])</span>
+<span class="n">V1</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V0</span>
+<span class="n">V2</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V1</span>
+<span class="n">V3</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V2</span>
+<span class="n">V4</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V3</span>
+<span class="n">V5</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V4</span>
+<span class="n">V6</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V5</span>
+<span class="n">V7</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V6</span>
+<span class="n">V8</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">V8</span><span class="p">)</span>
+<span class="n">V0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.34</span><span class="p">],[</span><span class="mf">0.16</span><span class="p">],[</span><span class="mf">0.18</span><span class="p">],[</span><span class="mf">0.32</span><span class="p">]])</span>
+<span class="n">iterasi</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+  <span class="n">error</span> <span class="o">=</span> <span class="mf">0.01</span>
+  <span class="n">Vn</span> <span class="o">=</span> <span class="n">A</span><span class="nd">@V0</span>
+  <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">V0</span><span class="p">)):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">Vn</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">V0</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+  <span class="n">V0</span> <span class="o">=</span> <span class="n">Vn</span>
+  <span class="k">if</span> <span class="n">total</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">break</span>
+  <span class="n">iterasi</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">iterasi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Vn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.38671875]
+ [0.12991898]
+ [0.28978588]
+ [0.19357639]]
+3
+[[0.35166667]
+ [0.15      ]
+ [0.29166667]
+ [0.20666667]]
+0.0
+1.4142135623730951
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
@@ -420,14 +502,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="sistemlinier.html"
-       title="next page">
+    <a class="left-prev"
+       href="transformasilinier.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 01 Sistem linier</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Transformasi linier</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -435,6 +517,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pagerank</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-pagerank">Algoritma Pagerank</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#komputasi-menghitung-page-rank">komputasi menghitung page rank</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
