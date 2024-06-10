@@ -146,7 +146,11 @@
   
   
   
-    <p class="title logo__title">My sample book</p>
+
+  <h1>KAL</h1>
+   <br>
+  <img src="_static/logo.jpg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -392,7 +396,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pagerank">
 <h1>Pagerank<a class="headerlink" href="#pagerank" title="Link to this heading">#</a></h1>
-<p>##Pengertian Pagerank</p>
+<h2>Pengertian Pagerank</h2>
 <p>Pagerank adalah algoritma yang digunakan Google untuk menganalisis distribusi link dan konektivitasnya pada setiap situs web.</p>
 <p>Pagerank algorithm memberikan nilai mulai dari 0 hingga 10 untuk menunjukkan seberapa berkualitasnya website tersebut. sederhananya, pagerank merupakan sistem pemeringkatan halaman website . semakin tinggi nilainya, maka bisa dikatakan website tersebut semakin kredibel.</p>
 <p>untuk cara kerjanya yaitu  dengan menghitung banyaknya jumlah dan kualitas link ke halaman situs untuk memperkirakan seberapa pentingnya situs tersebut.
@@ -401,7 +405,7 @@ Semakin banyak link yang mengarah ke sebuah halaman, semakin tinggi nilai PageRa
 <section class="tex2jax_ignore mathjax_ignore" id="algoritma-pagerank">
 <h1>Algoritma Pagerank<a class="headerlink" href="#algoritma-pagerank" title="Link to this heading">#</a></h1>
 <p>Dari pengertian diatas masih kurang bila belum ada contoh algortimanya.
-##Berikut ini contoh algoritma dari pagerank</p>
+<h2>Berikut ini contoh algoritma dari pagerank</h2>
 <ul class="simple">
 <li><p>caranya yag pertama buat V0 panjang matriksnya harus sama dengan matriks yang ingin dihitung angka nya bebas dengan syarat jika dijumlah harus sama dengan 1</p></li>
 <li><p>lakukan perulangan untuk mengalikan V0 dengan matriks A dan tarh hasil matriksnya di V1</p></li>
@@ -410,7 +414,7 @@ Semakin banyak link yang mengarah ke sebuah halaman, semakin tinggi nilai PageRa
 <li><p>Cara untuk menghentikan iterasi adlah dengan error toleransi atau dengan pembatasan jumlah iterasi</p></li>
 <li><p>pada error dengan cara membuatt batasan perbedaan pada contoh ini batasannya 0,01 semakin kecil maka semakin mendekati kebenaran</p></li>
 </ul>
-<p>##cara menghitung error toleransi</p>
+<h2>cara menghitung error toleransi</h2>
 <ul class="simple">
 <li><p>kurangi matris selanjutanya dengan matriks saat ini simpan hasilnya</p></li>
 <li><p>kuadratkan hasilnya dan kemudian total tammbahkan semuanya</p></li>
